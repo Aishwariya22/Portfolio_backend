@@ -13,11 +13,14 @@ app.post('/send-email', (req, res) => {
 
   // Configure the email transporter
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',  // Replace with your email provider (Gmail, Outlook, etc.)
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
-      user: 'aishwariyamazumdar2000@gmail.com',     // Your email address
-      pass: 'Aishwariya@22'       // Your email password
-    }
+    user: 'gmail.com',
+    pass: 'password',
+   },
   });
 
   // Set up the email options
